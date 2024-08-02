@@ -9,9 +9,10 @@ app_license = "mit"
 # Includes in <head>
 # ------------------
 
+fixtures = ["Custom Field"]
 # include js, css files in header of desk.html
 # app_include_css = "/assets/go1_projects/css/go1_projects.css"
-# app_include_js = "/assets/go1_projects/js/go1_projects.js"
+app_include_js = "/assets/go1_projects/js/update_timer.js"
 
 # include js, css files in header of web template
 # web_include_css = "/assets/go1_projects/css/go1_projects.css"
@@ -32,6 +33,11 @@ app_license = "mit"
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
+
+doctype_js = {
+    "Issue Type" : "public/js/issue_type.js",
+    "Project" : "public/js/project.js"
+    }
 
 # Svg Icons
 # ------------------
@@ -129,6 +135,12 @@ app_license = "mit"
 # 		"on_trash": "method"
 # 	}
 # }
+doc_events = {
+	"Issue Type": {
+		"on_update": "go1_projects.api.set_issue_screening_workflow"
+	}
+}
+
 
 # Scheduled Tasks
 # ---------------
@@ -150,6 +162,38 @@ app_license = "mit"
 # 		"go1_projects.tasks.monthly"
 # 	],
 # }
+scheduler_events = {
+# 	"all": [
+# 		"pms.tasks.all"
+# 	],
+    "cron": {
+        # "0/10 * * * *": [
+        #     "library_management.task.run_every_ten_mins"
+        # ],
+        "30 19 * * *": [
+            "go1_projects.go1_projects.doctype.proposal.proposal.schedulemail"
+        ],
+        "30 11 * * *":["go1_projects.api.cumulative_update_message",
+                        "go1_projects.api.mail_reports_to"
+        ],
+        "00 22 * * *":[
+            "go1_projects.api.cumulative_closing_update",
+            "go1_projects.api.mail_reports_to"
+        ]
+    },
+	"daily": [
+		"go1_projects.controller.senddailytask"
+	],
+# 	"hourly": [
+# 		"pms.tasks.hourly"
+# 	],
+# 	"weekly": [
+# 		"pms.tasks.weekly"
+# 	]
+# 	"monthly": [
+# 		"pms.tasks.monthly"
+# 	]
+}
 
 # Testing
 # -------
@@ -226,4 +270,7 @@ app_license = "mit"
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
+override_doctype_dashboards = {
+	"Project": "go1_projects.project.get_dashboard_data"
+}
 

@@ -1,0 +1,84 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-12 17:38:09.257110",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "subject",
+  "section_break_woeb1",
+  "reports_to",
+  "column_break_e5muf",
+  "report_mail",
+  "section_break_tyfsn",
+  "recipient"
+ ],
+ "fields": [
+  {
+   "fieldname": "recipient",
+   "fieldtype": "Table",
+   "label": "Recipient",
+   "options": "Daily Update Recipient"
+  },
+  {
+   "description": "If date not set ,report generated based on today",
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "label": "Subject"
+  },
+  {
+   "fieldname": "reports_to",
+   "fieldtype": "Link",
+   "label": "Reports To",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_e5muf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_tyfsn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_woeb1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "report_mail",
+   "fieldtype": "Button",
+   "label": "Report Mail"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-07-23 11:58:46.182142",
+ "modified_by": "Administrator",
+ "module": "Go1 Projects",
+ "name": "Daily Update Setting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

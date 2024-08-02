@@ -1,0 +1,57 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-13 13:41:33.545433",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "issue_type",
+  "issue_type_screen",
+  "edit_issue_type_screen",
+  "issue_type_workflow"
+ ],
+ "fields": [
+  {
+   "fieldname": "issue_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Issue Type",
+   "options": "Issue Type",
+   "read_only": 1
+  },
+  {
+   "fieldname": "issue_type_workflow",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Issue Type Workflow",
+   "options": "Workflow"
+  },
+  {
+   "fieldname": "issue_type_screen",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Create Issue Type Screen",
+   "options": "Issue Type Screening"
+  },
+  {
+   "fieldname": "edit_issue_type_screen",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Edit Issue Type Screen",
+   "options": "Issue Type Screening"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-25 18:06:35.849702",
+ "modified_by": "Administrator",
+ "module": "Go1 Projects",
+ "name": "Issue Type Screening Scheme",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

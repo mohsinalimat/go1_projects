@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "creation": "2024-05-15 12:29:29.072008",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "column_break_2",
+  "module",
+  "column_break_4",
+  "screen",
+  "section_break_6",
+  "test_cases"
+ ],
+ "fields": [
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project ",
+   "options": "Project"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "module",
+   "fieldtype": "Link",
+   "label": "Module",
+   "options": "Module"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "screen",
+   "fieldtype": "Link",
+   "label": "Screen",
+   "options": "Screen"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "test_cases",
+   "fieldtype": "Table",
+   "label": "Test Cases",
+   "options": "Test Case Child"
+  }
+ ],
+ "links": [],
+ "modified": "2024-05-15 13:31:14.935332",
+ "modified_by": "Administrator",
+ "module": "Go1 Projects",
+ "name": "Test Case",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

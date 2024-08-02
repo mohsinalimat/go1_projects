@@ -1,0 +1,80 @@
+{
+ "actions": [],
+ "allow_copy": 1,
+ "allow_rename": 1,
+ "creation": "2024-06-27 11:28:21.473909",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "allocate_work_tab",
+  "column_break_1vdva",
+  "update_log",
+  "column_break_6uets",
+  "section_break_jin4n",
+  "start_date",
+  "allocate_task"
+ ],
+ "fields": [
+  {
+   "fieldname": "column_break_1vdva",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_6uets",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_jin4n",
+   "fieldtype": "Section Break",
+   "hide_border": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "allocate_work_tab",
+   "fieldtype": "Tab Break",
+   "label": "Allocate Work"
+  },
+  {
+   "fieldname": "allocate_task",
+   "fieldtype": "Table",
+   "label": "Available Task",
+   "options": "Daily Update Item"
+  },
+  {
+   "fieldname": "update_log",
+   "fieldtype": "Button",
+   "hidden": 1,
+   "label": "Update Log"
+  }
+ ],
+ "hide_toolbar": 1,
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-07-26 12:58:28.694424",
+ "modified_by": "Administrator",
+ "module": "Go1 Projects",
+ "name": "Daily Update",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

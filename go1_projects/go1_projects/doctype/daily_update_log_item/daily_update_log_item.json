@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-27 12:44:40.323132",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "project",
+  "project_name",
+  "task",
+  "subject",
+  "description",
+  "expected_hrs",
+  "actual_hrs",
+  "status",
+  "started",
+  "completed",
+  "from_time",
+  "to_time",
+  "activity"
+ ],
+ "fields": [
+  {
+   "fieldname": "task",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Task",
+   "options": "Task"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "options": "Task"
+  },
+  {
+   "fieldname": "expected_hrs",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Expected Hrs"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name"
+  },
+  {
+   "fieldname": "actual_hrs",
+   "fieldtype": "Float",
+   "label": "Actual Hrs"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nWorking\nCompleted"
+  },
+  {
+   "default": "0",
+   "fieldname": "started",
+   "fieldtype": "Check",
+   "label": "Started"
+  },
+  {
+   "default": "0",
+   "fieldname": "completed",
+   "fieldtype": "Check",
+   "label": "Completed"
+  },
+  {
+   "fieldname": "to_time",
+   "fieldtype": "Datetime",
+   "label": "To Time"
+  },
+  {
+   "fieldname": "from_time",
+   "fieldtype": "Datetime",
+   "label": "From Time"
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Link",
+   "label": "Activity",
+   "options": "Activity Type"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-07-08 18:51:32.109325",
+ "modified_by": "Administrator",
+ "module": "Go1 Projects",
+ "name": "Daily Update Log Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

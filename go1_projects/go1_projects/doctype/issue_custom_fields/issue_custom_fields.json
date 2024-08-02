@@ -1,0 +1,106 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:field_label",
+ "creation": "2024-06-12 20:00:15.888896",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "field_label",
+  "field_type",
+  "field_name",
+  "reqd",
+  "column_break_d64y",
+  "options",
+  "section_break_bwzw",
+  "cascading_options",
+  "option_html",
+  "option_json"
+ ],
+ "fields": [
+  {
+   "fieldname": "field_label",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Filed Label",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "column_break_d64y",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "field_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Field Type",
+   "options": "Text Field (Single Line)\nText Field (Multi-Line)\nNumber field\nCheckboxes\nSelect list (Single choice)\nURL Field\nDate Picker\nDate Time Picker\nUser Picker (Single User)\nUser Picker (Multiple Users)\nGroup Picker (single group)\nGroup Picker (Multiple groups)\nSelect list (Cascading)"
+  },
+  {
+   "fieldname": "field_name",
+   "fieldtype": "Data",
+   "label": "Field Name",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "options",
+   "fieldtype": "Small Text",
+   "label": "Options"
+  },
+  {
+   "default": "0",
+   "fieldname": "reqd",
+   "fieldtype": "Check",
+   "label": "Is Mandatory"
+  },
+  {
+   "fieldname": "option_html",
+   "fieldtype": "HTML"
+  },
+  {
+   "fieldname": "option_json",
+   "fieldtype": "JSON",
+   "hidden": 1
+  },
+  {
+   "depends_on": "eval:doc.field_type == \"Select list (Cascading)\"",
+   "fieldname": "section_break_bwzw",
+   "fieldtype": "Section Break"
+  },
+  {
+   "depends_on": "eval:doc.field_type == \"Select list (Cascading)\"",
+   "fieldname": "cascading_options",
+   "fieldtype": "Table",
+   "label": "Cascading Options",
+   "options": "Cascading Options"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-06-25 18:12:51.113728",
+ "modified_by": "Administrator",
+ "module": "Go1 Projects",
+ "name": "Issue Custom Fields",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "field_type",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

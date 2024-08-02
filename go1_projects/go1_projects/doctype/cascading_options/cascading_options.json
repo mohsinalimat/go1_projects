@@ -1,0 +1,38 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-25 10:56:50.308666",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "parent_option",
+  "options"
+ ],
+ "fields": [
+  {
+   "fieldname": "parent_option",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Parent Option"
+  },
+  {
+   "fieldname": "options",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Options"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-25 10:59:39.434544",
+ "modified_by": "Administrator",
+ "module": "Go1 Projects",
+ "name": "Cascading Options",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

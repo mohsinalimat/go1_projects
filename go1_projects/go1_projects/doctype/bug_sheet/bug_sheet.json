@@ -1,0 +1,315 @@
+{
+ "actions": [],
+ "autoname": "Bug.###",
+ "creation": "2017-09-22 18:06:53.180024",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "details_section",
+  "project",
+  "project_name",
+  "column_break_2",
+  "module",
+  "module_name",
+  "column_break_4",
+  "screen",
+  "screen_name",
+  "project_details_section",
+  "bug_title",
+  "issue_type",
+  "category",
+  "fixed_on",
+  "as",
+  "reported_by",
+  "priority",
+  "verified_on",
+  "column_break_tiahe",
+  "reported_on",
+  "status",
+  "user_member",
+  "user_group_member",
+  "section_break_ebad",
+  "issue_screening_json",
+  "issue_screen_html",
+  "section_break_cixun",
+  "bug_description",
+  "attachments_tab",
+  "attachments",
+  "more_info_tab",
+  "target_start",
+  "environment",
+  "column_break_m6rgo",
+  "target_end",
+  "acceptance_criteria",
+  "section_break_2",
+  "users"
+ ],
+ "fields": [
+  {
+   "fieldname": "bug_title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Summary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "as",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reported_by",
+   "fieldtype": "Link",
+   "label": "Reported By",
+   "options": "User"
+  },
+  {
+   "fieldname": "section_break_2",
+   "fieldtype": "Tab Break",
+   "label": "Assignee"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "module",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Module",
+   "options": "Module"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "columns": 1,
+   "fieldname": "screen",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Screen",
+   "options": "Screen"
+  },
+  {
+   "bold": 1,
+   "columns": 1,
+   "default": "Today",
+   "fieldname": "reported_on",
+   "fieldtype": "Date",
+   "label": "Reported On",
+   "no_copy": 1
+  },
+  {
+   "fieldname": "fixed_on",
+   "fieldtype": "Date",
+   "label": "Fixed On ",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:((doc.fixed_on))\n",
+   "fieldname": "verified_on",
+   "fieldtype": "Date",
+   "label": "Verified On",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "hidden": 1,
+   "label": "Type",
+   "options": "Bug\nEnhancement\nQuestion"
+  },
+  {
+   "columns": 1,
+   "fieldname": "priority",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Priority",
+   "options": "High\nMedium\nLow",
+   "reqd": 1
+  },
+  {
+   "fieldname": "bug_description",
+   "fieldtype": "Text",
+   "label": "Bug Description"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Table",
+   "label": "Attachments",
+   "options": "Bug Attachment"
+  },
+  {
+   "fieldname": "details_section",
+   "fieldtype": "Tab Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "column_break_tiahe",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_cixun",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "more_info_tab",
+   "fieldtype": "Tab Break",
+   "label": "More Info"
+  },
+  {
+   "fieldname": "environment",
+   "fieldtype": "Small Text",
+   "label": "Environment"
+  },
+  {
+   "fieldname": "column_break_m6rgo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "acceptance_criteria",
+   "fieldtype": "Small Text",
+   "label": "Acceptance Criteria"
+  },
+  {
+   "fieldname": "target_start",
+   "fieldtype": "Date",
+   "label": "Target start"
+  },
+  {
+   "fieldname": "target_end",
+   "fieldtype": "Date",
+   "label": "Target end"
+  },
+  {
+   "fieldname": "attachments_tab",
+   "fieldtype": "Tab Break",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "project_details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fetch_from": "project.project_name",
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "module.module_name",
+   "fieldname": "module_name",
+   "fieldtype": "Data",
+   "label": "Module Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "screen_name",
+   "fieldtype": "Data",
+   "label": "Screen Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "users",
+   "fieldtype": "Table",
+   "label": "Assignee",
+   "options": "Bug User"
+  },
+  {
+   "depends_on": "eval:doc.project",
+   "fieldname": "issue_type",
+   "fieldtype": "Link",
+   "label": "Issue Type",
+   "options": "Issue Type"
+  },
+  {
+   "depends_on": "eval:doc.issue_type",
+   "fieldname": "section_break_ebad",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "issue_screen_html",
+   "fieldtype": "HTML",
+   "label": "Issue Screening"
+  },
+  {
+   "fieldname": "issue_screening_json",
+   "fieldtype": "JSON",
+   "hidden": 1,
+   "label": "Issue Screening JSON"
+  },
+  {
+   "fieldname": "user_member",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "User Member",
+   "options": "User Member"
+  },
+  {
+   "fieldname": "user_group_member",
+   "fieldtype": "Table",
+   "hidden": 1,
+   "label": "User Group Member",
+   "options": "User Group Member"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "label": "Status",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "links": [],
+ "modified": "2024-07-04 19:09:41.284421",
+ "modified_by": "Administrator",
+ "module": "Go1 Projects",
+ "name": "Bug Sheet",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "bug_title",
+ "track_changes": 1
+}

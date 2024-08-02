@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:workflow_name",
+ "creation": "2024-06-05 12:07:00.023160",
+ "description": "Defines workflow states and rules for a document.",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "workflow_name",
+  "issue_type",
+  "states_head",
+  "states",
+  "transition_rules",
+  "transitions",
+  "workflow_data"
+ ],
+ "fields": [
+  {
+   "fieldname": "workflow_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Workflow Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "description": "Different \"States\" this document can exist in. Like \"Open\", \"Pending Approval\" etc.",
+   "fieldname": "states_head",
+   "fieldtype": "Section Break",
+   "label": "States"
+  },
+  {
+   "description": "All possible Workflow States and roles of the workflow. Docstatus Options: 0 is \"Saved\", 1 is \"Submitted\" and 2 is \"Cancelled\"",
+   "fieldname": "states",
+   "fieldtype": "Table",
+   "label": "Document States",
+   "options": "Workflow Document State"
+  },
+  {
+   "description": "Rules for how states are transitions, like next state and which role is allowed to change state etc.",
+   "fieldname": "transition_rules",
+   "fieldtype": "Section Break",
+   "label": "Transition Rules"
+  },
+  {
+   "description": "Rules defining transition of state in the workflow.",
+   "fieldname": "transitions",
+   "fieldtype": "Table",
+   "label": "Transitions",
+   "options": "Workflow Transition"
+  },
+  {
+   "fieldname": "workflow_data",
+   "fieldtype": "JSON",
+   "hidden": 1,
+   "label": "Workflow Data"
+  },
+  {
+   "fieldname": "issue_type",
+   "fieldtype": "Link",
+   "label": "Issue Type",
+   "options": "Issue Type"
+  }
+ ],
+ "icon": "fa fa-random",
+ "links": [],
+ "modified": "2024-06-05 13:27:06.646215",
+ "modified_by": "Administrator",
+ "module": "Go1 Projects",
+ "name": "Issue Type Workflow",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "show_name_in_global_search": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

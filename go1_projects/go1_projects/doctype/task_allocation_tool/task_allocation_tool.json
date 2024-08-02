@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-07-26 17:00:04.506638",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "task_allocation_tab",
+  "project",
+  "section_break_ypwf",
+  "show_allocated_task",
+  "column_break_cvxv",
+  "pending_tasks",
+  "section_break_szns",
+  "task",
+  "allocation_history_tab",
+  "dashboard"
+ ],
+ "fields": [
+  {
+   "fieldname": "task_allocation_tab",
+   "fieldtype": "Tab Break",
+   "label": "Task Allocation"
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "fieldname": "section_break_ypwf",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "show_allocated_task",
+   "fieldtype": "Check",
+   "label": "Show Allocated task"
+  },
+  {
+   "fieldname": "column_break_cvxv",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pending_tasks",
+   "fieldtype": "Button",
+   "label": "Pending Tasks"
+  },
+  {
+   "fieldname": "section_break_szns",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "task",
+   "fieldtype": "Table",
+   "label": "Task",
+   "options": "Task Allocation Item"
+  },
+  {
+   "fieldname": "allocation_history_tab",
+   "fieldtype": "Tab Break",
+   "label": "Allocation History"
+  },
+  {
+   "fieldname": "dashboard",
+   "fieldtype": "HTML",
+   "label": "Dashboard"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-07-26 17:05:47.061607",
+ "modified_by": "Administrator",
+ "module": "Go1 Projects",
+ "name": "Task Allocation Tool",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,41 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-21 16:51:14.760615",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "default_workflow"
+ ],
+ "fields": [
+  {
+   "fieldname": "default_workflow",
+   "fieldtype": "Link",
+   "label": "Default Workflow",
+   "options": "Workflow"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-06-21 16:56:28.396209",
+ "modified_by": "Administrator",
+ "module": "Go1 Projects",
+ "name": "Issue Type Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
